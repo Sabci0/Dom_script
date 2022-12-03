@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   &__group{
+    margin-bottom: toRem(10px);
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +25,7 @@
     color: dimgray;
   }
   &__input{
-    margin-bottom: toRem(15px);
+    margin-bottom: toRem(5px);
     padding: toRem(10px);
     color: lightgray;
     font-weight: 100;
@@ -41,6 +42,14 @@
     &:focus:not([type='radio']){
       box-shadow: 2px 2px 4px 2px #545454;
     }
+    &--error{
+      border-color: red;
+    }
+  }
+  &__message {
+    margin: 0;
+    color: red;
+    font-size:toRem(15px)
   }
   &__sup{
     color: red;
