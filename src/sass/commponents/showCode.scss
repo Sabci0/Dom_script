@@ -1,10 +1,44 @@
-.show-code{
-  &__visualisation{
+@import "../_partials/helpers";
 
+.show-code{
+  max-width: toRem(600px);
+  border:toRem(1px) solid darkgray;
+  border-radius: toRem(4px);
+  margin: auto auto toRem(10px);
+  position: relative;
+
+  &__visualisation{
+    padding: toRem(10px);
+    border-bottom: toRem(1px) solid darkgray;
   }
   &__btn{
-
+    margin:auto;
+    display:block;
+    border: toRem(2px) solid green;
+    background-color: white;
+    border-radius: toRem(26px);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: green;
+    padding: toRem(5px) toRem(15px);
+    cursor: pointer;
+    transition: all 400ms;
+    position: absolute;
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    &:hover{
+      color: white;
+      background-color: green;
+    }
   }
-  &__code{}
-  &__hidden{}
+  &__code{
+    margin: 0;
+    padding: toRem(24px) toRem(10px) toRem(10px) ;
+    background-color: lightcyan;
+    border-bottom-left-radius: toRem(4px);
+    border-bottom-right-radius: toRem(4px);
+  }
+  &--hidden{
+   //display: none;
+  }
 }
