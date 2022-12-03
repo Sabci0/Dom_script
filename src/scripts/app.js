@@ -1,16 +1,19 @@
-const btnRef = document.querySelector( '#showCode');
-const codeRef = document.querySelector('.show-code__code');
+const btnsRef = document.querySelectorAll( '.show-code__btn');
 
-function toggleText(){
-    if (btnRef.innerText === 'POKAŻ KOD'){
-btnRef.innerText = 'SCHOWAJ KOD';
+
+function toggleText(btnRef){
+    if (btnRef.value === 'Pokaż kod'){
+        btnRef.value = 'Schowaj kod';
     }else {
-        btnRef.innerText = 'POKAŻ KOD';
+        btnRef.value = 'Pokaż kod';
     }
 }
 
-btnRef.addEventListener('click', function (){
-    toggleText();
-    codeRef.classList.toggle('show-code__code--hidden');
+btnsRef.forEach(function (btnRef){
+    btnRef.addEventListener('click', function () {
+        toggleText(btnRef);
+        btnRef.nextElementSibling.classList.toggle('show-code__code--hidden')
+    })
 });
+
 
