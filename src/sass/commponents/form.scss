@@ -1,0 +1,65 @@
+@import "../_partials/helpers";
+
+.box{
+  max-width: toRem(600px);
+  margin:auto;
+}
+
+.contact-form{
+  font-family: Roboto , sans-serif;
+  font-weight: 500;
+  padding-inline: toRem(15px);
+  display: flex;
+  flex-direction: column;
+  &__group{
+    display: flex;
+    flex-direction: column;
+  }
+  &__group--row{
+    flex-direction: row;
+    align-items: baseline;
+  }
+  &__label{
+    margin-bottom: toRem(5px);
+    color: dimgray;
+  }
+  &__input{
+    margin-bottom: toRem(15px);
+    padding: toRem(10px);
+    color: lightgray;
+    font-weight: 100;
+    border-radius: toRem(6px);
+    border: toRem(1px) solid grey;
+    outline: none;
+    &[type='checkbox'], &[type='radio']{
+      margin-right: toRem(6px);
+      &+label{
+        margin-right: toRem(20px);
+      }
+    }
+
+    &:focus:not([type='radio']){
+      box-shadow: 2px 2px 4px 2px #545454;
+    }
+  }
+  &__sup{
+    color: red;
+  }
+  &__submit{
+    align-self:flex-end;
+    margin-bottom: toRem(15px);
+    padding: toRem(10px) toRem(30px);
+    color: gray;
+    font-weight: 100;
+    border-radius: toRem(6px);
+    border: toRem(1px) solid grey;
+    cursor: pointer;
+    outline: none;
+    transition: all 200ms ease-in-out;
+    &:hover{
+      padding: toRem(5px) toRem(31px);
+      background-color: dimgray;
+      color: white;
+    }
+  }
+}
